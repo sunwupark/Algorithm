@@ -1,2 +1,2 @@
 # Algorithm
-BOJ or Programmers algorithm quiz
+BOJ or Programmers algorithm quiz!
