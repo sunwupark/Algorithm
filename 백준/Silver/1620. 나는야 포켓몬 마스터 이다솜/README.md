@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 62016 KB, 시간: 1516 ms
+메모리: 53400 KB, 시간: 172 ms
 
 ### 분류
 
@@ -12,7 +12,7 @@
 
 ### 제출 일자
 
-2023년 12월 8일 18:15:52
+2024년 11월 3일 15:17:10
 
 ### 문제 설명
 
@@ -50,7 +50,7 @@
 
 <p>이다솜 : 네. 야호!!</p>
 
-<p>'<img alt="" src="https://www.acmicpc.net/upload/201004/p3.PNG" style="height:181px; width:274px"></p>
+<p>'<img alt="" src="" style="height:181px; width:274px"></p>
 
 <p>오영식 : 어? 오박사님 얘는 누구인가요?</p>
 
@@ -70,11 +70,11 @@
 
 <p>이다솜 : 피카츄 공격!</p>
 
-<p><img alt="" src="https://www.acmicpc.net/upload/201004/p6.PNG" style="height:182px; width:274px"></p>
+<p><img alt="" src="" style="height:182px; width:274px"></p>
 
 <p>가라 몬스터 볼!</p>
 
-<p><img alt="" src="https://www.acmicpc.net/upload/201004/p7.PNG" style="height:184px; width:274px"></p>
+<p><img alt="" src="" style="height:184px; width:274px"></p>
 
 <p>이다솜 : 야호! 신난다. 꼬렛을 잡았다!!!!!</p>
 
@@ -100,7 +100,7 @@
 
 <p>이다솜 : 헐랭... 나를 우습게보네.... 한번 두고 보시지! 그럼 대결이닷!</p>
 
-<p><img alt="" src="https://www.acmicpc.net/upload/201004/pb.PNG" style="height:181px; width:274px"></p>
+<p><img alt="" src="" style="height:181px; width:274px"></p>
 
 <p><img alt="" src="" style="height:183px; width:274px"></p>
 
