@@ -1,28 +1,27 @@
+from collections import deque
+
 N, K = map(int, input().split())
+visited = [False for _ in range(max(N,K) * 2 + 1)]
 
-from collections import deque, defaultdict
+def bfs(node, end):
+    queue = deque([(node, 0)])
+    visited[node] = True
 
-queue = deque([N])
-visited = defaultdict(int)
-visited[N] = 1
-MAX = 10**5
+    while queue:
+        curr, time = queue.popleft()
 
-while len(queue) != 0:
-    cur = queue.popleft()
+        if curr == end:
+            print(time)
+            return
 
-    if cur == K:
-        print(visited[cur]-1)
-        break
+        if 0 <= curr * 2 < len(visited) and not visited[curr * 2]:
+            visited[curr * 2] = True
+            queue.append((curr * 2, time))
+        if curr - 1 >= 0 and not visited[curr - 1]:
+            visited[curr - 1] = True
+            queue.append((curr - 1, time + 1))
+        if 0 <= curr + 1 < len(visited) and not visited[curr + 1]:
+            visited[curr + 1] = True
+            queue.append((curr + 1, time + 1))
 
-    for index, mov in enumerate([cur*2, cur-1, cur+1]):
-        if mov < 0 or mov > MAX:
-            continue
-        if visited[mov]:
-            continue
-    
-        if index == 0:
-            visited[mov] = visited[cur]
-        else:
-            visited[mov] = visited[cur] + 1
-        
-        queue.append(mov)
+bfs(N, K)
