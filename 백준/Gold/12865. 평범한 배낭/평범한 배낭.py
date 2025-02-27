@@ -1,21 +1,15 @@
-def knapsack(W,  wt, val, n):
-    K = [[0 for x in range(W+1)] for x in range(n+1)]
-    for i in range(n+1):
-        for w in  range(W+1):
-            if i ==  0 or w == 0:
-                K[i][w] = 0
-            elif wt[i-1] <= w:
-                K[i][w] = max(val[i-1] + K[i-1][w-wt[i-1]], K[i-1][w])
-            else:
-                K[i][w] = K[i-1][w]
-    return K[n][W]
-
-N,K= map(int,  input().split())
-wt = []
-val = []
+N, K = map(int, input().split())
+objectList = []
 for i in range(N):
-    W, V = map(int,  input().split())
-    wt.append(W)
-    val.append(V)
-print(knapsack(K, wt, val, N))
+    W,V = map(int, input().split())
+    objectList.append((W,V))
 
+dp = [0] * (K+1)
+
+# 뒤에서 부터 계산을 한다
+
+for w,v in objectList:
+    for j in range(K, w-1, -1):
+        dp[j] = max(dp[j], dp[j-w] + v)
+
+print(dp[K])
