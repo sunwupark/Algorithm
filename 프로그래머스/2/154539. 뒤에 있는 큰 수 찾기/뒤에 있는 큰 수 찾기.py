@@ -1,12 +1,12 @@
 def solution(numbers):
     answer = [-1] * len(numbers)
+    
+    
     stack = []
-
-    for i in range(len(numbers) - 1, -1, -1):
-        # 현재 값보다 작거나 같은 값은 stack에서 제거
-        while stack and stack[-1] <= numbers[i]:
+    for i in range(len(numbers)-1, -1, -1):
+        while len(stack) > 0 and stack[-1] <= numbers[i]:
             stack.pop()
-
+        
         if stack:
             answer[i] = stack[-1]
         
